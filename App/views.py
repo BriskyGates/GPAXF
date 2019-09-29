@@ -67,10 +67,12 @@ def market_with_params(request, typeid, childcid, order_rule):
     ]
 
     user_id = request.session.get("user_id")
+    
     if user_id:  # 如果已登录
         user = AXFUser.objects.get(pk=user_id)
         user_carts = Cart.objects.filter(user=user)  # 查询当前用户的购物车记录
-        for goods in goods_list:
+        
+        for goods in goods_list:  # 遍历goods_list列表，然后一个个与的该用户的购物车模型进行比对，为啥不用is_selected和反向解析
             carts = user_carts.filter(goods=goods)
             if carts.exists():
                cart = carts.first()  # 查询当前用户对当前遍历商品的购物车记录
