@@ -45,17 +45,26 @@
       <file leaf-file-name="market.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/main/market.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
+            <state relative-caret-position="1968">
               <caret line="82" column="79" selection-start-line="82" selection-start-column="79" selection-end-line="82" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hyperlink.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hyperlink.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/forTest/hyperlink.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="数据详解.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/relevant data/数据详解.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -81,7 +90,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1992">
+            <state relative-caret-position="1728">
               <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
             </state>
           </provider>
@@ -118,10 +127,12 @@
       <find>make_order</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/static/css/reset.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/axf/main/js/home.js" />
@@ -172,6 +183,7 @@
         <option value="$PROJECT_DIR$/static/axf/main/js/market.js" />
         <option value="$PROJECT_DIR$/templates/main/market.html" />
         <option value="$PROJECT_DIR$/templates/forTest/hyperlink.html" />
+        <option value="$PROJECT_DIR$/relevant data/数据详解.txt" />
       </list>
     </option>
   </component>
@@ -185,9 +197,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="339" />
-    <option name="y" value="123" />
-    <option name="width" value="782" />
+    <option name="x" value="232" />
+    <option name="y" value="65" />
+    <option name="width" value="1140" />
     <option name="height" value="788" />
   </component>
   <component name="ProjectView">
@@ -195,6 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,30 +218,12 @@
             <path>
               <item name="GPAXF" type="b2602c69:ProjectViewProjectNode" />
               <item name="GPAXF" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GPAXF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GPAXF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GPAXF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GPAXF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="forTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GPAXF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GPAXF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="relevant data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,7 +231,7 @@
     <property name="SearchEverywhereHistoryKey" value="market.js&#9;FILE&#9;file://E:/Program Files/feiq/Recv Files/GPAXF/static/axf/main/js/market.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Flask/Flask01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -310,33 +305,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="665" y="23" width="782" height="788" extended-state="0" />
-    <editor active="true" />
+    <frame x="232" y="65" width="1140" height="788" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" type="SLIDING" weight="0.51547986" />
       <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20307693" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4362881" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20307693" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30555555" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" weight="0.32984293" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24981302" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32885906" />
-      <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32885906" />
       <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32885906" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32885906" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
@@ -372,13 +366,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/axf/user/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main/mine.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -667,7 +654,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1992">
+        <state relative-caret-position="1728">
           <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
         </state>
       </provider>
@@ -681,7 +668,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main/market.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
+        <state relative-caret-position="1968">
           <caret line="82" column="79" selection-start-line="82" selection-start-column="79" selection-end-line="82" selection-end-column="79" />
         </state>
       </provider>
@@ -689,7 +676,14 @@
     <entry file="file://$PROJECT_DIR$/templates/forTest/hyperlink.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relevant data/数据详解.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
         </state>
       </provider>
     </entry>
