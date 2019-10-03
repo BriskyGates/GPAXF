@@ -67,10 +67,12 @@ def market_with_params(request, typeid, childcid, order_rule):
     ]
 
     user_id = request.session.get("user_id")
+    
     if user_id:  # 如果已登录
         user = AXFUser.objects.get(pk=user_id)
         user_carts = Cart.objects.filter(user=user)  # 查询当前用户的购物车记录
-        for goods in goods_list:
+        
+        for goods in goods_list:  # 遍历goods_list列表，然后一个个与的该用户的购物车模型进行比对，为啥不用is_selected和反向解析
             carts = user_carts.filter(goods=goods)
             if carts.exists():
                cart = carts.first()  # 查询当前用户对当前遍历商品的购物车记录
@@ -252,12 +254,12 @@ def sub_from_cart(request):
 def add_shopping(request):   # 在购物车页面点击“加号”按钮
     cartid = request.GET.get("cartid")   # 获取购物车id
     cart = Cart.objects.get(pk=cartid)
-    cart.cart_goods_num = cart.cart_goods_num + 1
+    cart.cart_goods_num = cart.cart_goods_num + 1   # 增加购物车中的某件商品
     cart.save()
 
     user_id = request.session.get("user_id")
     user = AXFUser.objects.get(pk=user_id)
-    carts = Cart.objects.filter(user=user)  # 查询出当前用户的所有购物车记录
+    carts = Cart.objects.filter(user=user)  # 查询出当前用户的所有购物车记录（可能包括多个商品）
     totalprice = total_price(carts)
 
     data = {
@@ -294,11 +296,11 @@ def sub_shopping(request):   # 在购物车页面点击“减号”按钮
 def cart_all_select(request):     # 在购物车页面点击全选
     unselected = request.GET.get("cart_list")
 
-    if unselected:
+    if unselected:  # 是否存在cart_list
         unselected_list = unselected.split("#")
-        for cartid in unselected_list:
+        for cartid in unselected_list:   # unselected_list 中存放的是每个商品的cartid
             cart = Cart.objects.get(pk=cartid)
-            cart.is_selected = True
+            cart.is_selected = True  # 修改cart 模型类中is_selected 记录
             cart.save()
 
     user_id = request.session.get("user_id")
@@ -313,15 +315,15 @@ def cart_all_select(request):     # 在购物车页面点击全选
     return JsonResponse(data)
 
 
-def change_cart_state(request):   #  在购物车页面点击购物车条目的选中状态
+def change_cart_state(request):   #  在购物车页面点击  购物车条目的选中状态
     cartid = request.GET.get("cartid")
     cart = Cart.objects.get(pk=cartid)
-    cart.is_selected = not cart.is_selected   #  状态取反
+    cart.is_selected = not cart.is_selected   #  状态取反（某件商品的   选中与反选状态切换）
     cart.save()   # 更新该条购物车记录
 
     carts = Cart.objects.filter(user=request.user)  # 查询出当前用户的所有购物车记录
     is_all_select = True
-    for c in carts:
+    for c in carts:   # 查看当前用户的购物车记录中所有商品是否是选中状态
         if not c.is_selected:
             is_all_select = False
             break
@@ -339,12 +341,12 @@ def change_cart_state(request):   #  在购物车页面点击购物车条目的�
 def make_order(request):
     order = Order()   # 实例化订单对象
     order.o_user = request.user
-    carts = Cart.objects.filter(user=request.user).filter(is_selected=True)  # 查询当前用户的购物车记录
+    carts = Cart.objects.filter(user=request.user).filter(is_selected=True)  # 查询当前用户的已购物品
     order.o_price = total_price(carts)
     order.save()  # 保存到数据库
 
-    for cart in carts:
-        orderdetail = OrderDetail()   # 每个购物车记录对应一个订单详情信息
+    for cart in carts:  # 遍历购物车的每件商品 
+        orderdetail = OrderDetail()   # 每个购物车记录      对应一个订单详情信息
         orderdetail.order = order
         orderdetail.goods = cart.goods
         orderdetail.order_goods_num = cart.cart_goods_num
