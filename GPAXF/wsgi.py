@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "GPAXF.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "GPAXF.settings")  # web application的基础配置 
 
-application = get_wsgi_application()
+application = get_wsgi_application()  # 利用application 和web server 交互
