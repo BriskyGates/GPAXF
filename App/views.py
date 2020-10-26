@@ -337,7 +337,8 @@ def change_cart_state(request):   #  在购物车页面点击  购物车条目�
     return JsonResponse(data)
 
 
-# 下单
+# 将购物车中选中状态的商品加入订单对象的订单详情中
+# 订单,购物车,订单详情
 def make_order(request):
     """
     1. 实例化订单对象
@@ -350,19 +351,19 @@ def make_order(request):
     8. 保存当前商品详情记录
     9. 删除已遍历的购物车记录
     """
-    order = Order()   # 实例化订单对象
+    order = Order()   
     order.o_user = request.user
-    carts = Cart.objects.filter(user=request.user).filter(is_selected=True)  # 查询当前用户的已购物品
-    order.o_price = total_price(carts)
-    order.save()  # 保存到数据库
+    carts = Cart.objects.filter(user=request.user).filter(is_selected=True)  # 查询当前用户的已选中的物品
+    order.o_price = total_price(carts)  # 计算当前购物车中的商品总价
+    order.save()  # 订单保存到数据库
 
     for cart in carts:  # 遍历购物车的每件商品 
-        orderdetail = OrderDetail()   # 每个购物车记录      对应一个订单详情信息
+        orderdetail = OrderDetail()   # 购物车记录1:n个订单详情信息
         orderdetail.order = order
         orderdetail.goods = cart.goods
         orderdetail.order_goods_num = cart.cart_goods_num
         orderdetail.save()  # 保存订单详情
-        cart.delete()   #  删除当前遍历的购物车记录
+        cart.delete()   #  删除购物车中已经遍历的商品详情
 
     data = {
         "status":200,
@@ -416,18 +417,5 @@ def pay(request):
 
 
 
-
-
-
-
-
-# def my_send_email(request):
-#     subject = "好好学习吧！"
-#     message = "<h3>Come on~~~</h3>"
-#     from_email = '15114855862@163.com'
-#     receive_list = ['15114855862@163.com',]
-#     send_mail(subject=subject,message=message,from_email=from_email,recipient_list=receive_list,
-#               html_message=message)
-#     return HttpResponse("邮件发送成功！")
 
 
